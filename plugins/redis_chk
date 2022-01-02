@@ -1,0 +1,14 @@
+#!/bin/bash
+redis=$(ps aux | grep -v grep | grep redis-server | wc | awk {'print $1'})
+#echo $node
+case $redis in
+1)
+echo "OK - $redis redis-server is running."
+exit 0
+;;
+0)
+echo "CRITICAL- No redis-server is running."
+exit 2
+;;
+esac
+
