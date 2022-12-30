@@ -1,3 +1,3 @@
 # nrpe-config
 n
-mnmn
+m
